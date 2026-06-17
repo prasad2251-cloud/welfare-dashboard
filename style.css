@@ -1,92 +1,111 @@
 body{
-  font-family: Arial, sans-serif;
-  background:#eef4fa;
-  margin:20px;
-  text-align:center;
+    font-family: Arial, sans-serif;
+    background:#eef4fa;
+    margin:20px;
+    text-align:center;
 }
 
+/* Header */
 .header{
-  background:#002b5c;
-  color:white;
-  padding:25px;
-  border-radius:12px;
+    background:#002b5c;
+    color:white;
+    padding:25px;
+    border-radius:12px;
 }
 
 .header h1{
-  font-size:42px;
-  margin:0;
+    font-size:42px;
+    margin:0;
 }
 
 .header h2{
-  color:#ffd700;
-  margin-top:10px;
+    color:#ffd700;
+    margin-top:10px;
+    font-size:22px;
 }
 
+/* Cards */
 .cards{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  margin:30px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    margin:30px;
+    flex-wrap:wrap;
 }
 
 .card{
-  background:white;
-  width:220px;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 5px 12px rgba(0,0,0,0.15);
-  border-left:6px solid #004aad;
-  font-size:22px;
-  font-weight:bold;
-  transition:0.3s;
+    background:white;
+    width:220px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,0.15);
+    border-left:6px solid #004aad;
+    transition:0.3s;
 }
 
 .card:hover{
-  transform:scale(1.05);
+    transform:scale(1.05);
 }
 
+.card h3{
+    margin:0;
+    font-size:28px;
+}
+
+.card p{
+    font-size:30px;
+    font-weight:bold;
+    margin-top:10px;
+    color:#002b5c;
+}
+
+/* Search */
 .search-box{
-  margin:20px;
+    margin:20px;
 }
 
-input{
-  width:50%;
-  padding:12px;
-  font-size:20px;
-  border-radius:8px;
-  border:1px solid gray;
+#search{
+    width:55%;
+    padding:12px;
+    font-size:22px;
+    border-radius:8px;
+    border:2px solid #666;
 }
 
-h3{
-  margin-top:30px;
-  font-size:32px;
+/* Title */
+.table-title{
+    margin-top:30px;
+    color:black;
 }
 
+/* Table */
 table{
-  width:90%;
-  margin:auto;
-  border-collapse:collapse;
-  background:white;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.10);
 }
 
 th{
-  background:#004aad;
-  color:white;
-  padding:12px;
-  position:sticky;
-  top:0;
+    background:#004aad;
+    color:white;
+    padding:12px;
+    font-size:18px;
 }
 
 td{
-  padding:10px;
-  border:1px solid #ddd;
+    padding:10px;
+    border:1px solid #ccc;
 }
 
+/* Alternate rows */
 tr:nth-child(even){
-  background:#f2f8ff;
+    background:#eaf4ff;
 }
 
+/* Hover */
 tr:hover{
-  background:#d9ecff;
+    background:#dbeeff;
+    transition:0.2s;
 }
