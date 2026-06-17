@@ -2,15 +2,39 @@ document.addEventListener("DOMContentLoaded", loadData);
 
 async function loadData() {
 
-  const api = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+  const api = "YOUR_APPS_SCRIPT_URL";
 
   const response = await fetch(api);
   const data = await response.json();
 
-  document.getElementById("total").innerText = data.length;
+  let today = new Date();
+  let day = today.getDate();
+  let month = today.getMonth() + 1;
 
-  document.getElementById("birthday").innerText = 0;
-  document.getElementById("marriage").innerText = 0;
+  let birthdayCount = 0;
+  let marriageCount = 0;
+
+  data.forEach(emp => {
+
+    // Birthday count
+    let dob = new Date(emp.dob);
+
+    if (dob.getDate() == day && (dob.getMonth()+1) == month) {
+      birthdayCount++;
+    }
+
+    // Marriage count
+    let marriage = new Date(emp.marriage);
+
+    if (marriage.getDate() == day && (marriage.getMonth()+1) == month) {
+      marriageCount++;
+    }
+
+  });
+
+  document.getElementById("total").innerText = data.length;
+  document.getElementById("birthday").innerText = birthdayCount;
+  document.getElementById("marriage").innerText = marriageCount;
 
   let html = `
   <table>
