@@ -8,25 +8,36 @@
 <body>
 
 <div class="header">
+  <h1>🚔 ANDHRA PRADESH POLICE</h1>
+  <h2>CHITTOOR DISTRICT POLICE WELFARE DASHBOARD</h2>
+</div>
 
-  <img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Andhra_Pradesh_Police_Logo.png" class="logo">
+<div class="cards">
 
-  <div>
-    <h1>ANDHRA PRADESH POLICE</h1>
-    <h2>CHITTOOR DISTRICT POLICE WELFARE DASHBOARD</h2>
+  <div class="card">
+    👮 Total Employees<br>
+    <span id="total">0</span>
+  </div>
+
+  <div class="card">
+    🎂 Birthdays Today<br>
+    <span id="birthday">0</span>
+  </div>
+
+  <div class="card">
+    💍 Marriage Days<br>
+    <span id="marriage">0</span>
   </div>
 
 </div>
 
-<div class="cards">
-    <div class="card">👮 Total Employees <br><span id="total">0</span></div>
-    <div class="card">🎂 Birthdays Today <br><span>0</span></div>
-    <div class="card">💍 Marriage Days <br><span>0</span></div>
+<div class="search-box">
+  <input type="text" id="search" placeholder="🔍 Search Employee / Police Station">
 </div>
 
-<input type="text" placeholder="🔍 Search Employee / Police Station">
-
 <h3>Employee Welfare Register</h3>
+
+<div id="tableData"></div>
 
 <script src="script.js"></script>
 
