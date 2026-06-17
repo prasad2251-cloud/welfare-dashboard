@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", loadData);
 
 async function loadData() {
 
-  // PASTE FULL GOOGLE APPS SCRIPT URL
-  const api = https://script.google.com/u/0/home/projects/12PCIatPE9GSAOuDCvbOx5IHGfMnfVYTzAHFNC1iRB30g--o6eoRJU1DJ/edit
+  // Your Google Apps Script Web App URL
+  const api = "https://script.google.com/macros/s/AKfycbzu9mnQb_VIvkNZCRN6uFcTW9_7NYuG9kdzO-QuROl9awOFUGq5gUXvS5TxL9IsRa19yA/exec";
 
   try {
     const response = await fetch(api);
@@ -36,7 +36,7 @@ async function loadData() {
 
     });
 
-    // Dashboard cards
+    // Update dashboard cards
     document.getElementById("total").innerText = data.length;
     document.getElementById("birthday").innerText = birthdayCount;
     document.getElementById("marriage").innerText = marriageCount;
@@ -89,7 +89,7 @@ async function loadData() {
 
   } catch (error) {
     console.error("Error loading data:", error);
-    alert("Dashboard data not loading. Check Apps Script URL.");
+    alert("Dashboard data not loading. Check Apps Script deployment.");
   }
 }
 
@@ -103,4 +103,3 @@ function formatDate(dateString) {
   let year = d.getFullYear();
 
   return `${day}-${month}-${year}`;
-}
