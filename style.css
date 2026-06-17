@@ -1,80 +1,92 @@
 body{
-    font-family: Arial;
-    background:#eef4fa;
-    text-align:center;
-    margin:20px;
+  font-family: Arial, sans-serif;
+  background:#eef4fa;
+  margin:20px;
+  text-align:center;
 }
 
-/* Header */
 .header{
-    background:#003366;
-    color:white;
-    padding:20px;
-    border-radius:10px;
+  background:#002b5c;
+  color:white;
+  padding:25px;
+  border-radius:12px;
 }
 
 .header h1{
-    margin:0;
-    font-size:38px;
+  font-size:42px;
+  margin:0;
 }
 
 .header h2{
-    margin-top:10px;
-    color:#ffd700;
+  color:#ffd700;
+  margin-top:10px;
 }
 
-/* Cards */
 .cards{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    margin:20px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin:30px;
 }
 
 .card{
-    background:white;
-    padding:20px;
-    width:220px;
-    font-size:20px;
-    border-left:6px solid #004aad;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-    border-radius:8px;
+  background:white;
+  width:220px;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 12px rgba(0,0,0,0.15);
+  border-left:6px solid #004aad;
+  font-size:22px;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-/* Search */
+.card:hover{
+  transform:scale(1.05);
+}
+
+.search-box{
+  margin:20px;
+}
+
 input{
-    width:50%;
-    padding:12px;
-    margin:20px;
-    font-size:18px;
-    border:1px solid gray;
-    border-radius:6px;
+  width:50%;
+  padding:12px;
+  font-size:20px;
+  border-radius:8px;
+  border:1px solid gray;
 }
 
-/* Table */
+h3{
+  margin-top:30px;
+  font-size:32px;
+}
+
 table{
-    width:90%;
-    margin:auto;
-    border-collapse:collapse;
-    background:white;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  width:90%;
+  margin:auto;
+  border-collapse:collapse;
+  background:white;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
 
 th{
-    background:#004aad;
-    color:white;
-    padding:12px;
+  background:#004aad;
+  color:white;
+  padding:12px;
+  position:sticky;
+  top:0;
 }
 
 td{
-    padding:10px;
-    border:1px solid #ddd;
+  padding:10px;
+  border:1px solid #ddd;
 }
 
 tr:nth-child(even){
-    background:#f2f8ff;
+  background:#f2f8ff;
 }
 
 tr:hover{
-    background:#d8ebff;
+  background:#d9ecff;
 }
