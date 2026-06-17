@@ -1,45 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AP Police Welfare Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP Police Welfare Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="header">
-  <h1>🚔 ANDHRA PRADESH POLICE</h1>
-  <h2>CHITTOOR DISTRICT POLICE WELFARE DASHBOARD</h2>
-</div>
+    <!-- Header -->
+    <div class="header">
+        <h1>🚓 ANDHRA PRADESH POLICE</h1>
+        <h2>CHITTOOR DISTRICT POLICE WELFARE DASHBOARD</h2>
+    </div>
 
-<div class="cards">
+    <!-- Cards -->
+    <div class="cards">
 
-  <div class="card">
-    👮 Total Employees<br>
-    <span id="total">0</span>
-  </div>
+        <div class="card">
+            <h3>👮 Total Employees</h3>
+            <p id="total">0</p>
+        </div>
 
-  <div class="card">
-    🎂 Birthdays Today<br>
-    <span id="birthday">0</span>
-  </div>
+        <div class="card">
+            <h3>🎂 Birthdays Today</h3>
+            <p id="birthday">0</p>
+        </div>
 
-  <div class="card">
-    💍 Marriage Days<br>
-    <span id="marriage">0</span>
-  </div>
+        <div class="card">
+            <h3>💍 Marriage Days</h3>
+            <p id="marriage">0</p>
+        </div>
 
-</div>
+    </div>
 
-<div class="search-box">
-  <input type="text" id="search" placeholder="🔍 Search Employee / Police Station">
-</div>
+    <!-- Search Box -->
+    <div class="search-box">
+        <input 
+            type="text" 
+            id="search" 
+            placeholder="🔍 Search Employee / Police Station">
+    </div>
 
-<h3>Employee Welfare Register</h3>
+    <!-- Table Heading -->
+    <h2 class="table-title">Employee Welfare Register</h2>
 
-<div id="tableData"></div>
+    <!-- Table Data -->
+    <div id="dataTable"></div>
 
-<script src="script.js"></script>
+    <!-- JS -->
+    <script src="script.js"></script>
 
 </body>
 </html>
