@@ -4,7 +4,6 @@ async function loadData() {
 
   // PASTE YOUR GOOGLE APPS SCRIPT URL HERE
 const api = "https://script.google.com/macros/s/AKfycbzu9mnQb_VIvkNZCRN6uFcTW9_7NYuG9kdzO-QuROl9awOFUGq5gUXvS5TxL9IsRa19yA/exec";
-
   const response = await fetch(api);
   const data = await response.json();
 
