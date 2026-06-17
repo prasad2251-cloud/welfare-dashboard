@@ -4,54 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AP Police Welfare Dashboard</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- Header -->
-    <div class="header">
+    <header>
         <h1>🚓 ANDHRA PRADESH POLICE</h1>
         <h2>CHITTOOR DISTRICT POLICE WELFARE DASHBOARD</h2>
-    </div>
+    </header>
 
-    <!-- Cards -->
-    <div class="cards">
+    <!-- Cards Section -->
+    <div class="cards-container">
 
-        <div class="card">
+        <div class="card total">
             <h3>👮 Total Employees</h3>
-            <p id="total">0</p>
+            <p id="totalEmployees">2500</p>
         </div>
 
-        <div class="card">
+        <div class="card birthday">
             <h3>🎂 Birthdays Today</h3>
-            <p id="birthday">0</p>
+            <p id="birthdays">12</p>
         </div>
 
-        <div class="card">
+        <div class="card marriage">
             <h3>💍 Marriage Days</h3>
-            <p id="marriage">0</p>
+            <p id="marriages">5</p>
         </div>
 
     </div>
 
-    <!-- Search Box -->
+    <!-- Search -->
     <div class="search-box">
-        <input 
-            type="text" 
-            id="search" 
-            placeholder="🔍 Search Employee / Police Station">
+        <input type="text" placeholder="🔍 Search Employee / Police Station">
     </div>
 
-    <!-- Table Heading -->
-    <h2 class="table-title">Employee Welfare Register</h2>
+    <!-- Table -->
+    <div class="table-container">
+        <h2>Employee Welfare Register</h2>
 
-    <!-- Table Data -->
-    <div id="dataTable"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Rank</th>
+                    <th>Police Station</th>
+                    <th>DOB</th>
+                    <th>Marriage Day</th>
+                </tr>
+            </thead>
 
-    <!-- JS -->
-    <script src="script.js"></script>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Ravi Kumar</td>
+                    <td>SI</td>
+                    <td>Chittoor PS</td>
+                    <td>17-06-1990</td>
+                    <td>10-05-2015</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Suresh</td>
+                    <td>HC</td>
+                    <td>Palamaner PS</td>
+                    <td>18-06-1988</td>
+                    <td>15-07-2012</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>Prasad</td>
+                    <td>CI</td>
+                    <td>Nagari PS</td>
+                    <td>20-06-1985</td>
+                    <td>22-09-2010</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        Developed for Chittoor District Police | Welfare Dashboard
+    </footer>
 
 </body>
 </html>
