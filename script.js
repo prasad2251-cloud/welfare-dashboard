@@ -2,43 +2,41 @@ document.addEventListener("DOMContentLoaded", loadData);
 
 async function loadData() {
 
-  const api =
-  "https://script.google.com/macros/s/AKfycbz-wDK6Z-WhCr6yOvUtSGca6vVtInsdYBsi4_PgF-XOAjqS8_91fxhwh3dIAhzx_upy/exec";
+    const api =
+    "https://script.google.com/macros/s/AKfycbz-wDK6Z-WhCr6yOvUtSGca6vVtInsdYBsi4_PgF-XOAjqS8_91fxhwh3dIAhzx_upy/exec";
 
-  const response = await fetch(api);
- const data = await response.json();
-  let html = "<h2>Employee Welfare Data</h2>";
+    const response = await fetch(api);
+    const data = await response.json();
 
-  html += "<table border='1' cellpadding='10' style='margin:auto; border-collapse:collapse;'>";
+    // Total employees count
+    document.getElementById("total").innerText = data.length;
 
-  html += "<tr>";
-  html += "<th>Police Station</th>";
-  html += "<th>Rank</th>";
-  html += "<th>Employee Name</th>";
-  html += "<th>Date of Birth</th>";
-  html += "<th>Mobile No</th>";
-  html += "</tr>";
+    let html = "<table>";
 
-  data.forEach(emp => {
+    html += `
+    <tr>
+        <th>Police Station</th>
+        <th>Rank</th>
+        <th>Employee Name</th>
+        <th>Date of Birth</th>
+        <th>Mobile No</th>
+    </tr>
+    `;
 
-      html += "<tr>";
+    data.forEach(emp => {
 
-      html += "<td>" + emp.ps + "</td>";
+        html += `
+        <tr>
+            <td>${emp.ps}</td>
+            <td>${emp.rank}</td>
+            <td>${emp.employee}</td>
+            <td>${emp.dob}</td>
+            <td>${emp.mobile}</td>
+        </tr>
+        `;
+    });
 
-      html += "<td>" + emp.rank + "</td>";
+    html += "</table>";
 
-      html += "<td>" + emp.employee + "</td>";
-
-      html += "<td>" + emp.dob + "</td>";
-
-      html += "<td>" + emp.mobile + "</td>";
-
-      html += "</tr>";
-
-  });
-
-  html += "</table>";
-
-  document.body.innerHTML =
-      "<h1>CHITTOOR POLICE WELFARE DASHBOARD</h1>" + html;
+    document.body.innerHTML += html;
 }
