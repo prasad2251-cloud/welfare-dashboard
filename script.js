@@ -6,8 +6,7 @@ async function loadData() {
   "https://script.google.com/macros/s/AKfycbz-wDK6Z-WhCr6yOvUtSGca6vVtInsdYBsi4_PgF-XOAjqS8_91fxhwh3dIAhzx_upy/exec";
 
   const response = await fetch(api);
-  const data = await response.json();
-
+ const data = await response.json();
   let html = "<h2>Employee Welfare Data</h2>";
 
   html += "<table border='1' cellpadding='10' style='margin:auto; border-collapse:collapse;'>";
